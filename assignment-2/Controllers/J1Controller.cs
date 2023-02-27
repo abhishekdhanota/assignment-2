@@ -9,6 +9,14 @@ namespace assignment_2.Controllers
 {
     public class J1Controller : ApiController
     {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="burger"></param>
+    /// <param name="drink"></param>
+    /// <param name="side"></param>
+    /// <param name="desert"></param>
+    /// <returns></returns>
         [HttpGet]
         [Route("api/J1/Menu/{burger}/{drink}/{side}/{desert}")]
         public string Menu(int burger, int drink, int side, int desert)
