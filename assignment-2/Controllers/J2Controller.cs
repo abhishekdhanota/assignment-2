@@ -23,21 +23,21 @@ namespace assignment_2.Controllers
         [Route("api/J2/DiceGame/{a}/{b}")]
         public string DiceGame(int a, int b)
         {
-            int count = 0;
+            int count = 0; //variable  to count the number of combinations 
             for (int i = 1; i <= a; i++)
             {
-                for (int j = 1; j <= b; j++)
+                for (int j = 1; j <= b; j++)//nested for loop
                 {
-                    if (i + j == 10)
+                    if (i + j == 10)// condition for perfect combinations
                     {
-                        count++;
+                        count++; // counting the number of combinations
                     
                     }
                 }
             }
 
             string output = "There are " + count + "total ways to get the sum 10.";
-            return output;
+            return output; //returing the output
         }
     }
 }
